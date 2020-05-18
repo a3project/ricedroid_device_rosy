@@ -111,9 +111,6 @@ TARGET_SUPPORT_HAL1 := false
 # Cpusets
 ENABLE_CPUSETS := true
 
-# Crypto
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Display
 USE_DEVICE_SPECIFIC_DISPLAY := true
 DEVICE_SPECIFIC_DISPLAY_PATH := $(DEVICE_PATH)/qcom-caf/display
