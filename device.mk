@@ -131,7 +131,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor \
     camera.msm8953 \
-    libshims_camera \
+    libshimcam \
     libgui_vendor:32
 
 # Cgroup and task_profiles
