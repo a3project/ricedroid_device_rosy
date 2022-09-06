@@ -24,6 +24,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 TARGET_INCLUDE_STOCK_ARCORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # Inherit from rosy device
 $(call inherit-product, device/xiaomi/rosy/device.mk)
