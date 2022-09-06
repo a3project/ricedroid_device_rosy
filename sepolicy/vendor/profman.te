@@ -1,0 +1,1 @@
+allow profman vendor_file:file { read };
