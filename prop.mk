@@ -97,6 +97,9 @@ ro.hardware.egl=adreno
 PRODUCT_PROPERTY_OVERRIDES += \
 drm.service.enabled=true
 
+# Encryption
+ro.crypto.volume.contents_mode=aes-256-xts
+
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
