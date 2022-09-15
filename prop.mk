@@ -105,7 +105,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # IORap
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 ro.iorapd.enable=false
 
 # Media
