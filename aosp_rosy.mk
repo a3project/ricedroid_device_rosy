@@ -20,11 +20,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Inherit some common PixelOS stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
-TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-TARGET_SUPPORTS_QUICK_TAP := true
+#TARGET_INCLUDE_STOCK_ARCORE := false
+#TARGET_INCLUDE_LIVE_WALLPAPERS := false
+#TARGET_SUPPORTS_QUICK_TAP := true
 
 # Inherit from rosy device
 $(call inherit-product, device/xiaomi/rosy/device.mk)
