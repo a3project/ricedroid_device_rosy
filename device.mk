@@ -292,10 +292,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# OTA
-PRODUCT_PACKAGES += \
-	Updates
-
 # Perf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
