@@ -624,4 +624,9 @@
         </interface>
         <fqname>@1.1::IBluetoothSar/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.google.google_battery</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::IGoogleBattery/default</fqname>
+    </hal>
 </manifest>
