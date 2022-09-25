@@ -186,6 +186,10 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# Gallery
+PRODUCT_PACKAGES += \
+    Gallery2
+
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
