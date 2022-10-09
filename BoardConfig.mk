@@ -49,10 +49,14 @@ TARGET_KERNEL_CONFIG := rosy-perf_defconfig
 TARGET_KERNEL_VERSION := 4.9
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_VERSION := proton
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/proton-clang
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(TARGET_KERNEL_CLANG_PATH)/bin/aarch64-linux-gnu-
-CROSS_COMPILE := $(TARGET_KERNEL_CLANG_PATH)/bin/aarch64-linux-gnu-
-CROSS_COMPILE_ARM32 := $(TARGET_KERNEL_CLANG_PATH)/bin/arm-linux-gnueabi-
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM_IAS=1 LLVM=1 LD=ld.lld AR=llvm-ar NM=llvm-nm STRIP=llvm-strip
+TARGET_KERNEL_ADDITIONAL_FLAGS += OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump READELF=llvm-readelf HOSTAR=llvm-ar >
+TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(TARGET_KERNEL_CLANG_PATH)/bin/aarch64-linux-gnu-
+#CROSS_COMPILE := $(TARGET_KERNEL_CLANG_PATH)/bin/aarch64-linux-gnu-
+#CROSS_COMPILE_ARM32 := $(TARGET_KERNEL_CLANG_PATH)/bin/arm-linux-gnueabi-
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
